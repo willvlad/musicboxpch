@@ -1,0 +1,2294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informed Choice - Insurance Comparison Website How It Should Be</title>
+
+<!-- =========================
+ FAV AND TOUCH ICONS  
+============================== -->
+<link rel="shortcut icon" href="images/icons/favicon.ico">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+
+<!-- =========================
+     STYLESHEETS      
+============================== -->
+<%= stylesheet_link_tag "application", media: "all" %>
+
+<!-- WEBFONT -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic|Montserrat:700,400|Homemade+Apple' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+<!-- =========================
+   PRE LOADER       
+============================== -->
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
+<!-- =========================
+   HOME SECTION       
+============================== -->
+<header id="home" class="header">
+	
+	<!-- TOP BAR -->
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+		<div class="container">
+			<div class="navbar-header responsive-logo">
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-brand">
+				<%= image_tag "logo.png", alt: "InformedChoice" %>
+				</div>
+			</div>
+			<nav class="navbar-collapse collapse" role="navigation" id="bs-navbar-collapse">
+			<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#focus">Focus</a></li>
+<!-- 				<li><a href="#works">Works</a></li> -->
+				<li><a href="#aboutus">About Us</a></li>
+<!-- 				<li><a href="#team">Team</a></li>
+				<li><a href="#pricingtable">Pricing</a></li> -->
+				<li><a href="#features">Compare</a></li>
+<!-- 				<li><a href="#products">Products</a></li> -->
+				<li><a href="#testimonials">Testimonials</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- / END TOP BAR -->
+	
+	<!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
+	<div class="container">
+		
+		<!-- HEADING -->
+		<h1 class="intro">FIND THE BEST PRICE / QUALITY INSURANCE PRODUCTS</h1>
+<br></br>
+        <h3 class="sub-intro">Welcome to Informed Choice!</h3>
+		
+		<!-- CALL TO ACTION BUTTONS -->
+		<div class="buttons inpage-scroll">
+			<a href="#focus" class="btn btn-primary custom-button red-btn">Ready to choose your cover?</a>
+			<a href="#aboutus" class="btn btn-primary custom-button green-btn">Find out more about us</a>
+		</div>
+		
+		<!-- 3 SHORT MESSAGE ABOUT COMPANY -->
+        <div class="row bottom-message-section">
+			<div class="col-lg-4 col-sm-4">
+				<div class="short-text">
+					<i class="icon icon-fontawesome-webfont-358"></i> Best prices on the market
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-4">
+				<div class="short-text">
+					<i class="icon-fontawesome-webfont-286"></i> In-depth analysis of cover
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-4">
+				<div class="short-text">
+					<i class="icon-fontawesome-webfont-347"></i> Scoring and track record
+				</div>
+			</div>
+		</div>
+	</div> <!-- / END BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES  -->
+	
+</header> <!-- / END HOME SECTION  -->
+
+
+
+
+<!-- =========================
+   Flash messages from devise gem install advice file     
+============================== -->
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<!-- / END FLASH DEVISE SECTION  -->
+
+
+
+
+<!-- =========================
+   FOCUS SECTION      
+============================== -->
+
+<section class="focus" id="focus">
+<div class="container">
+	
+	<!-- SECTION HEADER -->
+	<div class="section-header">
+		
+		<!-- SECTION TITLE -->
+		<h2 class="dark-text">CHOOSE WHAT'S IMPORTANT TO YOU</h2>
+		
+		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+		<h6>
+			Selection of insurance products how you want it
+		</h6>
+	</div>
+	<!-- / END SECTION HEADER -->
+	
+	<!-- 4 FOCUS BOXES -->
+	<div class="row">
+		
+		<!-- FIRST FOCUS BOXES -->
+		<div class="col-lg-3 col-sm-3 focus-box red wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+			<div class="service-icon">
+				<i class="pixeden pd-icon-download"></i> <!-- FOCUS ICON-->
+			</div>
+			<h5 class="red-border-bottom">PRICE</h5> <!-- FOCUS HEADING -->
+			<p> <!-- FOCUS DESCRIPTION -->
+				Is the pricing is the primary deciding factor for you?
+			</p>
+		</div>
+		<!-- / END FIRST FOCUS BOX. Other boxes has same format -->
+		
+		<div class="col-lg-3 col-sm-3 focus-box green wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+			<div class="service-icon">
+				<span class="pixeden pd-icon-compas"></span>
+			</div>
+			<h5 class="green-border-bottom">BREADTH OF COVER</h5>
+			<p>
+				 Extra features and flexibility in cover as analysed by our experts on the basis of the insurers’ wording
+			</p>
+		</div>
+		
+		<div class="col-lg-3 col-sm-3 focus-box blue wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+			<div class="service-icon">
+				<i class="pixeden pd-icon-statistics"></i>
+			</div>
+			<h5 class="blue-border-bottom">CLAIM PAYOUT EXPERIENCE</h5>
+			<p>
+				 How many complaints have customers had with insurer’s claims department?
+			</p>
+		</div>
+		
+		<div class="col-lg-3 col-sm-3 focus-box yellow wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+			<div class="service-icon">
+				<i class="pixeden pd-icon-monitor"></i>
+			</div>
+			<h5 class="yellow-border-bottom">IC's Score</h5>
+			<p>
+				 Informed Choice's own scoring of the insurers
+			</p>
+		</div>
+	</div>
+	<!-- / END 4 FOCUS BOXES -->
+	
+	<!-- OTHER FOCUSES -->
+	<div class="other-focuses">
+		<h5><span class="section-footer-title">ALSO WE FOCUS ON</span></h5>
+	</div>
+	
+	<!-- OTHER FOCUS LIST -->
+	<div class="other-focus-list wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+		<ul>
+			<li><i class="icon-fontawesome-webfont-8"></i>INSTANT DELIVERY OF DOCUMENTATION</li>
+			<li><i class="icon-fontawesome-webfont-267"></i>UK-BASED CALL CENTRES</li>
+			<li><i class="icon-fontawesome-webfont-75"></i>SECURE STORAGE OF POLICY DOCUMENTS</li>
+			<li><i class="icon-fontawesome-webfont-358"></i>ANALYSIS OF CLAIMS EXPERIENCE</li>
+			<li><i class="icon-fontawesome-webfont-102"></i>IOS APP</li>
+			<li><i class="icon-fontawesome-webfont-328"></i>ANDROID APP</li>
+			<li><i class="icon-fontawesome-webfont-195"></i>WINDOWS APP</li>
+			<li><i class="icon-fontawesome-webfont-297"></i>PAPERLESS POLICY DOCUMENTATION</li>
+		</ul>
+	</div> <!-- / END OTHER FOCUS LIST -->
+</div> <!-- / END CONTAINER -->
+</section>  <!-- / END FOCUS SECTION -->
+
+<!-- =========================
+   SEPARATOR ONE      
+============================== -->
+
+<section class="separator-one">
+<div class="color-overlay">
+	<h3 class="container text wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+	We have many happy customers. You can check what they're saying about us. </h3>
+	<div class="wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+		<a href="" class="btn btn-primary custom-button green-btn">TESTIMONIALS</a>
+	</div>
+</div>
+</section>  <!-- / END SEPARATOR -->
+
+<!-- =========================
+   ABOUT US SECTION   
+============================== -->
+
+<section class="about-us" id="aboutus">
+<div class="container">
+	
+	<!-- SECTION HEADER -->
+	<div class="section-header">
+		
+		<!-- SECTION TITLE -->
+		<h2 class="white-text">About Us</h2>
+		
+		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+		<h6 class="white-text">
+				 Experience a different kind of comparison website and find out what fuels us.
+		</h6>
+	</div>
+	<!-- / END SECTION HEADER -->
+	
+	<!-- 3 COLUMNS OF ABOUT US-->
+	<div class="row">
+		
+		<!-- COLUMN 1 - BIG MESSAGE ABOUT THE COMPANY-->
+		<div class="col-lg-4 col-md-4 column">
+			<div class="big-intro wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+          Empowering customers in making better informed, meaningful insurance choices
+			</div>
+		</div>
+		
+		<!-- COLUMN 2 - BRIEF ABOUT THE COMPANY-->
+		<div class="col-lg-4 col-md-4 column">
+			<p class="wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+				 Informed Choice disrupts insurance price comparison industry by offering clients an entirely new approach - an insurance price comparison website built with the client's interests in mind. As buyers of insurance ourselves, we got tired of the same biased approach of all current insurance aggegators interested in selling insurance without regard to how fully it really meets the client's requirements.<br/><br/>
+                 In today's economy, customers deserve better. We offer them a creative edge that comes with having more empowering information at their fingertips allowing them to make intelligent choices and properly weigh the alternatives. This is the future. This is how people are supposed to navigate many dozens of insurance offers adequately protecting themselves with meaningful choices of insurance. Our innovation in decision-making from the customers' perspective will help disrupt the insurance industry. Informed Choice will be instrumental in the movement to modernise insurance for the better.<br/><br/>
+			</p>
+		</div>
+		
+		<!-- COLUMN 1 - SKILSS-->
+		<div class="col-lg-4 col-md-4 column">
+			<ul class="skills wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+				
+				<!-- SKILL ONE -->
+				<li class="skill">
+                    <h3 class="sub-intro" align="center">Insurance offers today</h3>
+                    <br>
+					<div class="skill-count">
+						<input type="text" value="55" data-thickness=".2" class="skill1">
+					</div>
+					<h6>Car insurers</h6>
+					<p>
+						All major insurers active in this market including direct
+					</p>
+				</li>
+				
+				<!-- SKILL TWO -->
+				<li class="skill">
+					<div class="skill-count">
+						<input type="text" value="85" data-thickness=".2" class="skill2">
+					</div>
+					<h6>Household insurers</h6>
+					<p>
+						All major insurers active in this market including direct
+					</p>
+				</li>
+				
+				<!-- SKILL THREE -->
+				<li class="skill">
+					<div class="skill-count">
+						<input type="text" value="70" data-thickness=".2" class="skill3">
+					</div>
+					<h6>Travel insurers</h6>
+					<p>
+						All major insurers active in this market including direct
+					</p>
+				</li>
+				
+				<!-- SKILL FOUR -->
+				<li class="skill">
+					<div class="skill-count">
+						<input type="text" value="92" data-thickness=".2" class="skill4">
+					</div>
+					<h6>Landlord insurance</h6>
+					<p>
+						All major insurers active in this market including direct
+					</p>
+				</li>
+				
+			</ul> 
+		</div> <!-- / END SKILLS COLUMN-->
+	</div> <!-- / END 3 COLUMNS OF ABOUT US-->
+
+	<!-- CLIENTS -->
+	<div class="our-clients">
+		<h5><span class="section-footer-title">OUR HAPPY CLIENTS</span></h5>
+	</div>
+	<!-- CLIENT LIST -->
+	<div class="client-list">
+		<ul class="wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+			<li><a href="#"><img src="images/clients/1.png" alt="Client 1"></a></li>
+			<li><a href="#"><img src="images/clients/2.png" alt="Client 2"></a></li>
+			<li><a href="#"><img src="images/clients/3.png" alt="Client 3"></a></li>
+			<li><a href="#"><img src="images/clients/1.png" alt="Client 1"></a></li>
+			<li><a href="#"><img src="images/clients/4.png" alt="Client 4"></a></li>
+			<li><a href="#"><img src="images/clients/5.png" alt="Client 5"></a></li>
+			<li><a href="#"><img src="images/clients/6.png" alt="Client 6"></a></li>
+		</ul>
+	</div> <!-- / END CLIENT LIST -->
+</div> <!-- / END CONTAINER -->
+
+</section> <!-- END ABOUT US SECTION -->
+
+<!-- =========================
+   STATS              
+============================== -->
+
+<section class="stats">
+	<div class="container">
+	    <!-- STATS -->
+	    <div class="row">
+	        
+	        <!-- START COLUMN -->
+	        <div class="col-lg-3 col-sm-3">
+	            <div class="stat wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+	                <div class="icon-top red-text">
+	                    <i class="icon-design-graphic-tablet-streamline-tablet"></i>
+	                </div>
+	                <div class="stat-text">
+	                <h3 class="white-text red-border-bottom">1,236</h3>
+	                <h6>Products Analysed</h6>
+	                </div>
+	            </div>
+	        </div> <!-- / END COLUMN -->
+	        
+	        <!-- START COLUMN -->
+	        <div class="col-lg-3 col-sm-3">
+	            <div class="stat wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.75s" data-wow-delay="0.30s">
+	                <div class="icon-top green-text">
+	                    <i class="icon-man-people-streamline-user"></i>
+	                </div>
+	                <div class="stat-text">
+	                <h3 class="white-text green-border-bottom">2,906</h3>
+	                <h6>Happy Customers</h6>
+	                </div>
+	            </div>
+	        </div> <!-- / END COLUMN -->
+	        
+	        <!-- START COLUMN -->
+	        <div class="col-lg-3 col-sm-3">
+	            <div class="stat wow fadeInUp animated" data-wow-offset="30" data-wow-duration="2s" data-wow-delay="0.45s">
+	                <div class="icon-top blue-text">
+	                    <i class="icon-email-mail-streamline"></i>
+	                </div>
+	                <div class="stat-text">
+	                <h3 class="white-text blue-border-bottom">6,236</h3>
+	                <h6>Customer Conversations</h6>
+	                </div>
+	            </div>
+	        </div> <!-- / END COLUMN -->
+	        
+	        <!-- START COLUMN -->
+	        <div class="col-lg-3 col-sm-3">
+	            <div class="stat wow fadeInUp animated" data-wow-offset="30" data-wow-duration="2.25s" data-wow-delay="1s">
+	                <div class="icon-top yellow-text">
+	                    <i class="icon-picture-streamline-1"></i>
+	                </div>
+	                <div class="stat-text">
+	                <h3 class="white-text yellow-border-bottom">2,519</h3>
+	                <h6>Policies Arranged</h6>
+	                </div>
+	            </div>
+	        </div> <!-- / END COLUMN -->
+	    </div>
+</div>
+</section>  <!-- / END STATS -->
+
+<!-- =========================
+   FEATURES SECTION   
+============================== -->
+<section class="features" id="features">
+<div class="container">
+		
+		<!-- SECTION HEADER -->
+	<div class="section-header">
+		
+		<!-- SECTION TITLE -->
+		<h2 class="dark-text">Criteria for comparison</h2>
+		
+		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+		<h6>
+			We have dozens of criteria to help you find the right cover for you.
+		</h6>
+	</div>
+	<!-- / END SECTION HEADER -->
+	
+	<!-- FEATURS -->
+	<div class="form-section-content form-section-criteriaselector-content">
+                <a name="data-selector" href="#" tabindex="-1" aria-hidden="true"></a>
+                <div class="l-constrained">
+                    <div class="form-section-wrapper form-section-criteriaselector-wrapper">
+
+                        <div class="form-section-header form-section-criteriaselector-header">
+                             
+                                <p><strong>We've added some</strong> of our criteria to the table below.</p>
+                                <p class="l-push-down-2"> <strong>To change the criteria displayed,</strong> check the box next to the criteria you want and click 'Apply changes'</p>
+                                                     
+                        </div>
+               
+                        <div class="form-section-body form-section-criteriaselector-body expandable">
+                            <div class="grid l-stack-lt-med l-pull-x1">
+                                
+                                        <div class="unit u1of2">
+                                            <ul class="form-selectlist">
+                                                
+                                                        <li class="is-expanded expandable-box is-preexpanded-box is-exp-static is-open">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-overall-features-score" name="cb-selected-field-overall-features-score" value="1" checked="checked">
+                                                                    
+                                                                        <label for="cb-selected-field-overall-features-score">
+                                                                            <span class="form-selectlist-text">Overall features score</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-up"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                <div class="form-selectlist-details expandable-box-content" aria-live="assertive" style="display: block;">
+                                                                    <div class="expandable-box-body">
+                                                                        <p>
+The features score is made up of medical (40%), cancellation (25%), baggage (20%), public liability (5%), activities covered (5%), pre-existing conditions,
+life and total and permanent disability, dependants and rental car (5%)
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                        </li>
+                                                    
+                                                         
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-price-rating" name="cb-selected-field-price-rating" value="1" checked="checked">
+                                                                    
+                                                                        <label for="cb-selected-field-price-rating">
+                                                                            <span class="form-selectlist-text">Price rating</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                <div class="form-selectlist-details expandable-box-content" aria-live="assertive">
+                                                                    <div class="expandable-box-body">
+                                                                        <p>
+Policies are ranked from the cheapest marked as £ through to £££££ being the most expensive for each category.
+</p>
+<p>
+The £ rating is based on the average premium for singles, couples and families across four regions, Asia Pacific, Asia, Europe and worldwide. In total, we
+collect more than 1000 quotes for comprehensive, budget, annual and mature traveller categories.
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cancellation-score" name="cb-selected-field-cancellation-score" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-cancellation-score">
+                                                                            <span class="form-selectlist-text">Cancellation score</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                <div class="form-selectlist-details expandable-box-content" aria-live="assertive">
+                                                                    <div class="expandable-box-body">
+                                                                        <p>
+The higher the score, the better the extent of cover provided for cancellation expenses relative to other policies.
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-activities-score" name="cb-selected-field-activities-score" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-activities-score">
+                                                                            <span class="form-selectlist-text">Activities score</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                <div class="form-selectlist-details expandable-box-content" aria-live="assertive">
+                                                                    <div class="expandable-box-body">
+                                                                        <p>
+The higher the score, the better the extent of cover provided for activities such as riding a motorbike or floating in a hot air balloon, relative to other policies.
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-medical-evacuation-expenses" name="cb-selected-field-medical-evacuation-expenses" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-medical-evacuation-expenses">
+                                                                            <span class="form-selectlist-text">Medical evacuation expenses (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-medical-expenses-for-kidnap-or-hijack" name="cb-selected-field-medical-expenses-for-kidnap-or-hijack" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-medical-expenses-for-kidnap-or-hijack">
+                                                                            <span class="form-selectlist-text">Medical expenses for kidnap or hijack (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-medical-expenses-for-natural-disaster" name="cb-selected-field-medical-expenses-for-natural-disaster" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-medical-expenses-for-natural-disaster">
+                                                                            <span class="form-selectlist-text">Medical expenses for natural disaster (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-daily-hospital-cash-allowance" name="cb-selected-field-daily-hospital-cash-allowance" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-daily-hospital-cash-allowance">
+                                                                            <span class="form-selectlist-text">Daily hospital cash allowance (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-dental-expenses-for-accident-or-injury" name="cb-selected-field-dental-expenses-for-accident-or-injury" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-dental-expenses-for-accident-or-injury">
+                                                                            <span class="form-selectlist-text">Dental expenses for accident or injury (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-funeral-expenses" name="cb-selected-field-funeral-expenses" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-funeral-expenses">
+                                                                            <span class="form-selectlist-text">Funeral expenses (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cancellation-expenses" name="cb-selected-field-cancellation-expenses" value="1" checked="checked">
+                                                                    
+                                                                        <label for="cb-selected-field-cancellation-expenses">
+                                                                            <span class="form-selectlist-text">Cancellation expenses (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cancellation-expenses-for-kidnap-or-hijack" name="cb-selected-field-cancellation-expenses-for-kidnap-or-hijack" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-cancellation-expenses-for-kidnap-or-hijack">
+                                                                            <span class="form-selectlist-text">Cancellation expenses for kidnap or hijack (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cancellation-expenses-for-natural-disaster" name="cb-selected-field-cancellation-expenses-for-natural-disaster" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-cancellation-expenses-for-natural-disaster">
+                                                                            <span class="form-selectlist-text">Cancellation expenses for natural disaster (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-travel-agents-cancellation-fees" name="cb-selected-field-travel-agents-cancellation-fees" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-travel-agents-cancellation-fees">
+                                                                            <span class="form-selectlist-text">Travel agent cancellation fees (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cancellation-for-insolvency-of-a-travel-agent" name="cb-selected-field-cancellation-for-insolvency-of-a-travel-agent" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-cancellation-for-insolvency-of-a-travel-agent">
+                                                                            <span class="form-selectlist-text">Cancellation for insolvency of a travel agent</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cancellation-for-life-threatening-illness-of-a-relative" name="cb-selected-field-cancellation-for-life-threatening-illness-of-a-relative" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-cancellation-for-life-threatening-illness-of-a-relative">
+                                                                            <span class="form-selectlist-text">Cancellation for life-threatening illness of a relative</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cancellation-for-relatives-that-dont-live-in-uk" name="cb-selected-field-cancellation-for-relatives-that-dont-live-in-uk" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-cancellation-for-relatives-that-dont-live-in-uk">
+                                                                            <span class="form-selectlist-text">Cancellation for relatives that don't live in UK</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-expenses-for-resumption-of-the-journey" name="cb-selected-field-expenses-for-resumption-of-the-journey" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-expenses-for-resumption-of-the-journey">
+                                                                            <span class="form-selectlist-text">Expenses for resumption of the journey (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-hours-before-travel-delay-covered" name="cb-selected-field-hours-before-travel-delay-covered" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-hours-before-travel-delay-covered">
+                                                                            <span class="form-selectlist-text">Hours before travel delay covered</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-expenses-for-lost-or-stolen-baggage" name="cb-selected-field-expenses-for-lost-or-stolen-baggage" value="1" checked="checked">
+                                                                    
+                                                                        <label for="cb-selected-field-expenses-for-lost-or-stolen-baggage">
+                                                                            <span class="form-selectlist-text">Expenses for lost or stolen baggage (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-limit-for-a-camera" name="cb-selected-field-limit-for-a-camera" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-limit-for-a-camera">
+                                                                            <span class="form-selectlist-text">Limit for a camera (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-limit-for-mobile-phone" name="cb-selected-field-limit-for-mobile-phone" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-limit-for-mobile-phone">
+                                                                            <span class="form-selectlist-text">Limit for mobile phone (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-overall-limit-for-specified-items" name="cb-selected-field-overall-limit-for-specified-items" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-overall-limit-for-specified-items">
+                                                                            <span class="form-selectlist-text">Overall limit for specified items (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-is-baggage-locked-in-boot-of-a-car-during-day-covered" name="cb-selected-field-is-baggage-locked-in-boot-of-a-car-during-day-covered" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-is-baggage-locked-in-boot-of-a-car-during-day-covered">
+                                                                            <span class="form-selectlist-text">Baggage locked in boot of car during day</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-valuables-eg-laptop-camera-locked-in-boot-of-a-car-covered" name="cb-selected-field-valuables-eg-laptop-camera-locked-in-boot-of-a-car-covered" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-valuables-eg-laptop-camera-locked-in-boot-of-a-car-covered">
+                                                                            <span class="form-selectlist-text">Valuables (e.g. laptop or camera) locked in boot of car</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cover-limit-for-cash" name="cb-selected-field-cover-limit-for-cash" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-cover-limit-for-cash">
+                                                                            <span class="form-selectlist-text">Cover limit for cash (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-replacement-costs-for-lost-credit-cards" name="cb-selected-field-replacement-costs-for-lost-credit-cards" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-replacement-costs-for-lost-credit-cards">
+                                                                            <span class="form-selectlist-text">Replacement costs for lost credit cards</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-limit-for-baggage-lost-temporarily" name="cb-selected-field-limit-for-baggage-lost-temporarily" value="1">
+                                                                    
+                                                                        <label for="cb-selected-field-limit-for-baggage-lost-temporarily">
+                                                                            <span class="form-selectlist-text">Limit for baggage lost temporarily (£)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  expandable-box" style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-personal-liability-expenses-millions" name="cb-selected-field-personal-liability-expenses-millions" value="1" checked="checked">
+                                                                    
+                                                                        <label for="cb-selected-field-personal-liability-expenses-millions">
+                                                                            <span class="form-selectlist-text">Personal liability expenses (£m)</span>
+                                                                        </label>
+                                                                        <a class="expandable-box-toggle" href="#"><span class="vis-hidden">Expand to view more details. </span><span aria-hidden="true" class="icon icon-16 icon-down"></span></a>
+                                                                    
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-do-you-cover-abseiling" name="cb-selected-field-do-you-cover-abseiling" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-do-you-cover-abseiling">
+                                                                            <span class="form-selectlist-text">Abseiling</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-motorcycle-with-helmet-and-ukn-motorcycle-license" name="cb-selected-field-motorcycle-with-helmet-and-ukn-motorcycle-license" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-motorcycle-with-helmet-and-ukn-motorcycle-license">
+                                                                            <span class="form-selectlist-text">Motorcycle with helmet and ukn motorcycle licence</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-canyoning" name="cb-selected-field-canyoning" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-canyoning">
+                                                                            <span class="form-selectlist-text">Canyoning</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-hiking-without-ropes" name="cb-selected-field-hiking-without-ropes" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-hiking-without-ropes">
+                                                                            <span class="form-selectlist-text">Hiking without ropes</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-ballooning" name="cb-selected-field-ballooning" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-ballooning">
+                                                                            <span class="form-selectlist-text">Ballooning</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-paragliding" name="cb-selected-field-paragliding" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-paragliding">
+                                                                            <span class="form-selectlist-text">Paragliding</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-skiing" name="cb-selected-field-skiing" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-skiing">
+                                                                            <span class="form-selectlist-text">Skiing</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-snowboarding" name="cb-selected-field-snowboarding" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-snowboarding">
+                                                                            <span class="form-selectlist-text">Snowboarding</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-snowmobile" name="cb-selected-field-snowmobile" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-snowmobile">
+                                                                            <span class="form-selectlist-text">Snowmobile</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-white-water-rafting" name="cb-selected-field-white-water-rafting" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-white-water-rafting">
+                                                                            <span class="form-selectlist-text">White water rafting</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cover-pre-existing-medical-conditions-subject-to-assessment" name="cb-selected-field-cover-pre-existing-medical-conditions-subject-to-assessment" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-cover-pre-existing-medical-conditions-subject-to-assessment">
+                                                                            <span class="form-selectlist-text">Cover for pre-existing medical conditions subject to assessment</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-cover-for-claims-relating-to-mental-illness" name="cb-selected-field-cover-for-claims-relating-to-mental-illness" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-cover-for-claims-relating-to-mental-illness">
+                                                                            <span class="form-selectlist-text">Cover for claims relating to mental illness</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-good-points" name="cb-selected-field-good-points" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-good-points">
+                                                                            <span class="form-selectlist-text">Good points</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+
+                                                                                                                <li class="is-exp-hidden  " style="display: list-item;">
+                                                            <div class="form-selectlist-label">
+                                                                <span class="form-selectlist-text-wrap expandable-box-label">
+                                                                    
+                                                                        <input class="input input-checkbox" type="checkbox" id="cb-selected-field-good-points" name="cb-selected-field-good-points" value="1">
+                                                                    
+                                                                    
+                                                                        <label for="cb-selected-field-good-points">
+                                                                            <span class="form-selectlist-text">Bad points</span>
+                                                                        </label>
+                                                                    
+                                                                </span>
+
+                                                            </div>
+                                                            
+                                                        </li>
+                                                    
+                                                    
+                                            </ul>
+                                        </div>
+                                    
+                            </div>                    
+                            
+                                <div class="exp-foot">
+                                    <div class="grid grid-reverse l-stack-lt-med exp-controls" style="display: block;">
+                                        <div class="unit u1of1">
+                                            <a class="cta cta-link cta-secondary exp-show-more" href="#" data-init="4" data-showing="Show fewer criteria <span class='icon icon-up icon-16'></span>">Show all criteria <span aria-hidden="true" class="icon icon-down icon-16"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            <div class="form-foot">
+                                <input type="submit" name="main_1£contentfooter_0£ApplyChanges" value="Apply changes" id="main_1_contentfooter_0_ApplyChanges" class="button button-secondary">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+		</div> <!-- / END FEATURES COLUMN RIGHT -->
+	</div> <!-- / END FEATURES -->
+
+
+<!-- =========================
+   RESULTS          
+============================== -->
+
+<div class="expandable">
+                    <div class="l-align-center">
+                    <div class="l-relative tableSortingOverlayWrap">
+                        <div id="TableSortingOverlay" class="" style="display: none;">
+                            <span class="inner l-pad-top-1">
+                                Loading <span class="icon icon-linear-loader"></span>
+                            </span>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="content-data-table scroll-x ps-container is-scroll-x-active is-scrollbar-fixed">
+                        <p class="vis-hidden">Screen reader users should use table controls to navigate the comparison table below.</p>
+                        <table class="table-sticky table-sticky-header table-sticky-column l-align-center tablesorter tablesorter-default hasStickyColumns hasStickyHeaders" role="presentation">
+                            <colgroup class="cg-product-description odd"></colgroup>                        
+                            
+                                    <colgroup class="odd"></colgroup>
+                                
+                                    <colgroup class="even"></colgroup>
+                                
+                                    <colgroup class="odd"></colgroup>
+                                
+                                    <colgroup class="even"></colgroup>
+                                
+                                    <colgroup class="odd"></colgroup>
+                                
+                                    <colgroup class="even"></colgroup>
+                                
+                                    <colgroup class="odd"></colgroup>
+                                
+
+                            <thead class="icon-16" style="top: 0px;">
+                                <tr class="tablesorter-headerRow" role="row">
+                                    <th class="fixed-cell tablesorter-header header tablesorter-headerAsc" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="ascending" aria-label="Product (35 Total) : Ascending sort applied, activate to apply a descending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">Product (35 Total) <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span></div></th>
+                                                                                        
+                                            <th data-column="1" class="tablesorter-header header tablesorter-headerDesc" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="descending" aria-label="
+                                                Overall features score 
+                                                    
+                                                
+                                            : Descending sort applied, activate to apply an ascending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">
+                                                Informed Choice features score <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span>
+                                                    
+                                                
+                                            </div></th>
+                                                                                            
+                                            <th data-column="2" class="tablesorter-header header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="
+                                                Price rating 
+                                                    
+                                                
+                                            : No sort applied, activate to apply a descending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">
+                                                Price rating <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span>
+                                                    
+                                                
+                                            </div></th>
+                                                                                            
+                                            <th data-column="3" class="tablesorter-header header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="
+                                                Medical expenses (£) 
+                                                    
+                                                
+                                            : No sort applied, activate to apply a descending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">
+                                                Medical expenses (£) <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span>
+                                                    
+                                                
+                                            </div></th>
+                                                                                            
+                                            <th data-column="4" class="tablesorter-header header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="
+                                                Cancellation expenses (£) 
+                                                    
+                                                
+                                            : No sort applied, activate to apply a descending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">
+                                                Cancellation expenses (£) <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span>
+                                                    
+                                                
+                                            </div></th>
+                                                                                            
+                                            <th data-column="5" class="tablesorter-header header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="
+                                                Expenses for lost or stolen baggage (£) 
+                                                    
+                                                
+                                            : No sort applied, activate to apply a descending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">
+                                                Expenses for lost or stolen baggage (£) <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span>
+                                                    
+                                                
+                                            </div></th>
+                                                                                            
+                                            <th data-column="6" class="tablesorter-header header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="
+                                                Personal liability expenses (£m) 
+                                                    
+                                                
+                                            : No sort applied, activate to apply a descending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">
+                                                Personal liability expenses (£m) <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span>
+                                                    
+                                                
+                                            </div></th>
+                                                                                            
+                                            <th data-column="7" class="tablesorter-header header tablesorter-headerUnSorted" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="
+                                                Basic policy excess (£) 
+                                                    
+                                                
+                                            : No sort applied, activate to apply a descending sort" style="-webkit-user-select: none;"><div class="tablesorter-header-inner">
+                                                Basic policy excess (£) <span aria-hidden="true" class="icon icon-up-down" title="Sort"></span>
+                                                    
+                                                
+                                            </div></th>
+                                        
+                                </tr>
+                            </thead>
+                            <tbody class="icon-24" aria-live="polite" aria-relevant="all">
+                                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                            <tr class="is-expanded is-exp-static">
+                <td class="fixed-cell">
+                    <a href="/" tabindex="-1" aria-hidden="true" target="ProductWin3">
+                        <img src="images/publishing.png" alt="">
+                    </a>
+                    <div class="content-itemenu-details">
+                        <h4 class="type-heading type-h4"><a href="/" target="ProductWin3">AIG</a></h4>
+                    </div>
+                </td>
+                
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_3_tableCell_0">
+                            
+            <span>
+                77%
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_3_tableCell_1">
+                            
+            <span>
+                £££££       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_3_tableCell_2">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_3_tableCell_3">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_3_tableCell_4">
+                            
+            <span>
+                15,000       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_3_tableCell_5">
+                            
+            <span>
+                2.5       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_3_tableCell_6">
+                            
+            <span>
+                100       
+            </span>
+        
+                        </td>
+
+                    
+            </tr><tr class="is-expanded is-exp-static">
+                <td class="fixed-cell">
+                    <a href="/" tabindex="-1" aria-hidden="true" target="ProductWin3">
+                        <img src="images/publishing.png" alt="">
+                    </a>
+                    <div class="content-itemenu-details">
+                        <h4 class="type-heading type-h4"><a href="/" target="ProductWin3">Zurich</a></h4>
+                    </div>
+                </td>
+                
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_15_tableCell_0">
+                            
+            <span>
+                77%
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_15_tableCell_1">
+                            
+            <span>
+                ££       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_15_tableCell_2">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_15_tableCell_3">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_15_tableCell_4">
+                            
+            <span>
+                15,000       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_15_tableCell_5">
+                            
+            <span>
+                2.5       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_15_tableCell_6">
+                            
+            <span>
+                100       
+            </span>
+        
+                        </td>
+
+                    
+            </tr><tr class="is-expanded is-exp-static">
+                <td class="fixed-cell">
+                    <a href="/" tabindex="-1" aria-hidden="true" target="ProductWin3">
+                        <img src="images/publishing.png" alt="">
+                    </a>
+                    <div class="content-itemenu-details">
+                        <h4 class="type-heading type-h4"><a href="/" target="ProductWin3">Liberty</a></h4>
+                    </div>
+                    </div>
+                </td>
+                
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_5_tableCell_0">
+                            
+            <span>
+                76%
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_5_tableCell_1">
+                            
+            <span>
+                £££££       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_5_tableCell_2">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_5_tableCell_3">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_5_tableCell_4">
+                            
+            <span>
+                5,000       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_5_tableCell_5">
+                            
+            <span>
+                2       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_5_tableCell_6">
+                            
+            <span>
+                0; 50       
+            </span>
+        
+                        </td>
+
+                    
+            </tr><tr class="is-expanded is-exp-static">
+                <td class="fixed-cell">
+                    <a href="/" tabindex="-1" aria-hidden="true" target="ProductWin3">
+                        <img src="images/publishing.png" alt="">
+                    </a>
+                    <div class="content-itemenu-details">
+                        <h4 class="type-heading type-h4"><a href="/" target="ProductWin3">TravelSure</a></h4>
+                    </div>
+                </td>
+                
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_22_tableCell_0">
+                            
+            <span>
+                75%
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_22_tableCell_1">
+                            
+            <span>
+                £££££       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_22_tableCell_2">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_22_tableCell_3">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_22_tableCell_4">
+                            
+            <span>
+                15,000       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_22_tableCell_5">
+                            
+            <span>
+                3       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_22_tableCell_6">
+                            
+            <span>
+                100       
+            </span>
+        
+                        </td>
+
+                    
+            </tr><tr class="is-expanded is-exp-static">
+                <td class="fixed-cell">
+                    <a href="/" tabindex="-1" aria-hidden="true" target="ProductWin3">
+                        <img src="images/publishing.png" alt="">
+                    </a>
+                    <div class="content-itemenu-details">
+                        <h4 class="type-heading type-h4"><a href="/" target="ProductWin3">Axa</a></h4>
+                    </div>
+                </td>
+                
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_8_tableCell_0">
+                            
+            <span>
+                73%
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_8_tableCell_1">
+                            
+            <span>
+                £££££       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_8_tableCell_2">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_8_tableCell_3">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_8_tableCell_4">
+                            
+            <span>
+                12,000       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_8_tableCell_5">
+                            
+            <span>
+                2.5       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_8_tableCell_6">
+                            
+            <span>
+                100; 200; 300; 400; 500       
+            </span>
+        
+                        </td>
+
+                    
+            </tr><tr class="is-expanded is-exp-static">
+                <td class="fixed-cell">
+                    <a href="/" tabindex="-1" aria-hidden="true" target="ProductWin3">
+                        <img src="images/publishing.png" alt="">
+                    </a>
+                    <div class="content-itemenu-details">
+                        <h4 class="type-heading type-h4"><a href="/" target="ProductWin3">Ergo</a></h4>
+                    </div>
+                </td>
+                
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_10_tableCell_0">
+                            
+            <span>
+                73%
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_10_tableCell_1">
+                            
+            <span>
+                £££££       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_10_tableCell_2">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_10_tableCell_3">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_10_tableCell_4">
+                            
+            <span>
+                12,000       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_10_tableCell_5">
+                            
+            <span>
+                2.5       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_10_tableCell_6">
+                            
+            <span>
+                100; 200; 300; 400; 500       
+            </span>
+        
+                        </td>
+
+                    
+            </tr><tr class="is-expanded is-exp-static">
+                <td class="fixed-cell">
+                    <a href="/" tabindex="-1" aria-hidden="true" target="ProductWin3">
+                        <img src="images/publishing.png" alt="">
+                    </a>
+                    <div class="content-itemenu-details">
+                        <h4 class="type-heading type-h4"><a href="/" target="ProductWin3">Admiral</a></h4>
+                    </div>
+                
+                 <td id="main_1_contentfooter_0_ProductTestResult_DataRow_25_tableCell_0">
+                            
+            <span>
+                73%
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_25_tableCell_1">
+                            
+            <span>
+                ££££       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_25_tableCell_2">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_25_tableCell_3">
+                            
+            <span>
+                Unlimited       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_25_tableCell_4">
+                            
+            <span>
+                12,000       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_25_tableCell_5">
+                            
+            <span>
+                2.5       
+            </span>
+        
+                        </td>
+
+                    
+                        <td id="main_1_contentfooter_0_ProductTestResult_DataRow_25_tableCell_6">
+                            
+            <span>
+                250       
+            </span>
+        
+                        </td>
+
+                    
+            </tr><tr class="is-expanded is-exp-static">
+                
+                </tbody>
+                        </table></div>                                      
+                    <div class="ps-scrollbar-x-rail" style="width: 1831.5px; display: inherit; left: auto; bottom: 0px; right: 0px;"><div class="ps-scrollbar-x" style="left: 0px; width: 1831px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 5839px; display: none;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+                    
+                   <!-- <div class="exp-foot">
+                        <div class="grid grid-reverse l-stack-lt-med exp-controls">                            
+                            <div class="unit u1of3 l-align-right-med">
+                                <span class="exp-meta">Displaying <span class="exp-increment">10</span> of <span class="exp-total">35</span> products</span>
+                            </div>
+                            
+                                <div class="unit u1of3">
+                                    <a class="cta cta-link cta-secondary exp-show-more" href="#" data-init="10" data-init-mob="4" data-interval="10" data-interval-mob="4" data-increment="10" data-showing="Show less products <span class='icon icon-up icon-16'></span>">Show <span class="exp-interval">10</span> more products <span aria-hidden="true" class="icon icon-down icon-16"></span></a>
+                                    <br /><a class="cta cta-link cta-secondary exp-show-more exp-show-all l-push-y1" href="#">Show all</a>
+                                </div> 
+                                <div class="unit u1of3">
+                                    &nbsp;
+                                </div>
+                            
+                        </div>
+                    </div>  -->
+                    
+                </div>
+
+
+<!-- / END RESULTS SECTION -->
+
+
+</div> <!-- / END CONTAINER -->
+</section> <!-- / END FEATURES SECTION -->
+
+
+
+
+
+
+
+<!-- =========================
+   TESTIMONIAL        
+============================== -->
+
+<section class="testimonial" id="testimonials">
+<div class="container">
+	  
+	  <!-- SECTION HEADER -->
+        <div class="section-header">
+		
+		<!-- SECTION TITLE -->
+		<h2 class="white-text">Testimonials</h2>
+		
+		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+		<h6 class="white-text">
+			We have worked with hundreds of clients. Check what our awesome happy clients saying about us. 
+		</h6>
+	</div>
+	<!-- / END SECTION HEADER -->
+	
+	<!-- CLIENT FEEDBACKS -->
+	<div class="row wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+		<div class="col-md-12">
+			<div id="client-feedbacks" class="owl-carousel owl-theme">
+				
+				<!-- SINGLE FEEDBACK BOX-->
+				<div class="feedback-box">
+					
+					<!-- MESSAGE OF THE CLIENT -->
+					<div class="message">
+						 “Called days. Image kind beginning have. Herb set kind herb. Wherein saying third was, every land moveth also bearing hath bring had give god gathered behold open cattle after a, from third male subdue multiply divided void cattle winged. Herb set kind herb. multiply divided void cattle winged. Herb set kind herb.”
+					</div>
+					
+					<!-- CLIENT INFORMATION -->
+					<div class="client">
+						<div class="quote red-text">
+							<i class="icon-fontawesome-webfont-294"></i>
+						</div>
+						<div class="client-info">
+							<a class="client-name" href="">Frank Willian</a> 
+							<div class="client-company">
+								 CEO, AbcD Network
+							</div>
+						</div>
+						<div class="client-image hidden-xs">
+							<img src="images/clients-pic/1.jpg" alt="">
+						</div>
+					</div> <!-- / END CLIENT INFORMATION-->
+				</div> <!-- / END SINGLE FEEDBACK BOX-->
+				
+				<div class="feedback-box">
+					<div class="message">
+						 “Called days. Image kind beginning have. Herb set kind herb. Wherein saying third was, every land moveth also bearing hath bring had give god gathered behold open cattle after a, from third male subdue multiply divided void cattle winged. Herb set kind herb. multiply divided void cattle winged. Herb set kind herb.”
+					</div>
+					<div class="client">
+						<div class="quote green-text">
+							<i class="icon-fontawesome-webfont-294"></i>
+						</div>
+						<div class="client-info">
+							<a class="client-name" href="">David Clyne</a>
+							<div class="client-company">
+								 CEO, Zyxw
+							</div>
+						</div>
+						<div class="client-image hidden-xs">
+							<img src="images/clients-pic/2.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="feedback-box">
+					<div class="message">
+						 “Called days. Image kind beginning have. Herb set kind herb. Wherein saying third was, every land moveth also bearing hath bring had give god gathered behold open cattle after a, from third male subdue multiply divided void cattle winged. Herb set kind herb. multiply divided void cattle winged. Herb set kind herb.”
+					</div>
+					<div class="client">
+						<div class="quote blue-text">
+							<i class="icon-fontawesome-webfont-294"></i>
+						</div>
+						<div class="client-info">
+							<a class="client-name" href="">Keith McCarthy</a>
+							<div class="client-company">
+								 Manager, XYZ Inc.
+							</div>
+						</div>
+						<div class="client-image hidden-xs">
+							<img src="images/clients-pic/3.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="feedback-box">
+					<div class="message">
+						 “Called days. Image kind beginning have. Herb set kind herb. Wherein saying third was, every land moveth also bearing hath bring had give god gathered behold open cattle after a, from third male subdue multiply divided void cattle winged. Herb set kind herb. multiply divided void cattle winged. Herb set kind herb.”
+					</div>
+					<div class="client">
+						<div class="quote red-text">
+							<i class="icon-fontawesome-webfont-294"></i>
+						</div>
+						<div class="client-info">
+							<a class="client-name" href="">Frank Willian</a>
+							<div class="client-company">
+								 CEO, AbcD Network
+							</div>
+						</div>
+						<div class="client-image hidden-xs">
+							<img src="images/clients-pic/2.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="feedback-box">
+					<div class="message">
+						 “Called days. Image kind beginning have. Herb set kind herb. Wherein saying third was, every land moveth also bearing hath bring had give god gathered behold open cattle after a, from third male subdue multiply divided void cattle winged. Herb set kind herb. multiply divided void cattle winged. Herb set kind herb.”
+					</div>
+					<div class="client">
+						<div class="quote green-text">
+							<i class="icon-fontawesome-webfont-294"></i>
+						</div>
+						<div class="client-info">
+							<a class="client-name" href="">David Clyne</a>
+							<div class="client-company">
+								 CEO, Zyxw
+							</div>
+						</div>
+						<div class="client-image hidden-xs">
+							<img src="images/clients-pic/3.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="feedback-box">
+					<div class="message">
+						 “Called days. Image kind beginning have. Herb set kind herb. Wherein saying third was, every land moveth also bearing hath bring had give god gathered behold open cattle after a, from third male subdue multiply divided void cattle winged. Herb set kind herb. multiply divided void cattle winged. Herb set kind herb.”
+					</div>
+					<div class="client">
+						<div class="quote blue-text">
+							<i class="icon-fontawesome-webfont-294"></i>
+						</div>
+						<div class="client-info">
+							<a class="client-name" href="">Keith McCarthy</a>
+							<div class="client-company">
+								 Manager, XYZ Inc.
+							</div>
+						</div>
+						<div class="client-image hidden-xs">
+							<img src="images/clients-pic/1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				
+			</div> <!-- / END FEEDBACKS-->
+		</div> <!-- / END COLUMN -->
+	</div> <!-- / END ROW -->
+	
+</div> <!-- / END CONTAINER -->
+</section> <!-- / END TESTIMONIAL SECTION -->
+
+
+<!-- =========================
+   CONTACT US         
+============================== -->
+
+<section class="contact-us" id="contact">
+<div class="container">
+	
+	<!-- SECTION HEADER -->
+        <div class="section-header">
+		
+		<!-- SECTION TITLE -->
+		<h2 class="white-text">Get in touch</h2>
+		
+		<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+		<h6 class="white-text">
+			Have any question? Drop us a message. We will get back to you in 24 hours.
+		</h6>
+	</div>
+	<!-- / END SECTION HEADER -->
+	
+	<!-- CONTACT FORM-->
+	<div class="row">
+		<form role="form" class="contact-form" id="contact-form">
+			<div class="wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+			<div class="col-lg-4 col-sm-4">
+				<input type="text" name="name" placeholder="Your Name" class="form-control input-box" id="name">
+			</div>
+			<div class="col-lg-4 col-sm-4">
+				<input type="email" name="email" placeholder="Your Email" class="form-control input-box" id="email">
+			</div>
+			<div class="col-lg-4 col-sm-4">
+				<input type="text" name="subject" placeholder="Subject" class="form-control input-box" id="subject">
+			</div>
+			</div>
+			
+			<div class="clearfix">
+			<div class="col-md-12 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+				<textarea name="message" class="form-control textarea-box" placeholder="Your Message" id="message"></textarea>
+			</div>
+			</div>
+			<!-- IF MAIL SENT SUCCESSFULLY -->
+					<h4 class="success pull-left white-text">
+						Your message has been sent successfully.
+					</h4>
+					
+					<!-- IF MAIL SENDING UNSUCCESSFULL -->
+					<h4 class="error pull-left white-text">
+						E-mail must be valid and message must be longer than 1 character.
+					</h4>
+			<button class="btn btn-primary custom-button red-btn wow fadeInLeft animated" id="submit" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s" type="submit">Send Message</button>
+		</form>
+	</div>
+	<!-- / END CONTACT FORM-->
+</div> <!-- / END CONTAINER -->
+</section> <!-- / END CONTACT US SECTION-->
+
+<!-- =========================
+   FOOTER             
+============================== -->
+
+<footer>
+<div class="container">
+	
+	<!-- COMPANY ADDRESS-->
+	<div class="col-md-5 company-details">
+		<div class="icon-top red-text">
+		    <i class="icon-fontawesome-webfont-302"></i>
+		</div>
+		PO Box 16122 LONDON EC3N 8JR UNITED KINGDOM
+	</div>
+	
+	<!-- COMPANY EMAIL-->
+	<div class="col-md-2 company-details">
+		<div class="icon-top green-text">
+		<i class="icon-fontawesome-webfont-329"></i>
+		</div>
+		 contact@InformedChoice.com	</div>
+	
+	<!-- COMPANY PHONE NUMBER -->
+	<div class="col-md-2 company-details">
+		<div class="icon-top blue-text">
+		<i class="icon-fontawesome-webfont-101"></i>
+		</div>
+		(207) 777-1231
+	</div>
+	
+	<!-- SOCIAL ICON AND COPYRIGHT -->
+	<div class="col-lg-3 col-sm-3 copyright">
+		<ul class="social">
+			<li><a href=""><i class="icon-facebook"></i></a></li>
+			<li><a href=""><i class="icon-twitter-alt"></i></a></li>
+			<li><a href=""><i class="icon-linkedin"></i></a></li>
+			<li><a href=""><i class="icon-behance"></i></a></li>
+			<li><a href=""><i class="icon-dribbble"></i></a></li>
+		</ul>
+		 ©2015 Informed Choice
+	</div>
+</div> <!-- / END CONTAINER -->
+</footer> <!-- / END FOOOTER  -->
+
+<!-- SCRIPTS -->
+<%= javascript_include_tag "application" %>
+
+</body>
+
+
+</html>
